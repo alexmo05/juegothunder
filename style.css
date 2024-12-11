@@ -1,0 +1,136 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffcc00; /* Fondo más colorido y alegre */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Menú */
+.menu {
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    margin: 15px;
+    padding: 20px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Pantalla de Juego */
+.gameArea {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://www.publicdomainpictures.net/pictures/30000/velka/sun-and-clouds-1460138900hxZ.jpg'); /* Fondo divertido y alegre */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+/* Jugador */
+.player {
+    position: absolute;
+    width: 100px; /* Aumentamos el tamaño del jugador */
+    height: 100px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('images-removebg-preview.png');
+    background-size: contain;
+    background-position: center;
+    /* Eliminamos la sombra de la imagen */
+}
+
+/* Puntuación y Vidas */
+#score, #lives {
+    position: absolute;
+    top: 20px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#score {
+    left: 20px;
+}
+
+#lives {
+    right: 20px;
+}
+
+/* Pantalla de Game Over */
+.gameOver {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff4d4d;
+    font-weight: bold;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.6);
+}
+
+.gameOver h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #ff4d4d;
+}
+
+.gameOver button {
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gameOver button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Objetos que caen */
+.fallingObject {
+    position: absolute;
+    width: 80px; /* Aumentamos el tamaño del objeto que cae */
+    height: 80px;
+    background-size: contain;
+    background-position: center;
+    /* Eliminamos sombras */
+    transition: transform 0.1s ease-in-out;
+}
+
+.fallingObject:hover {
+    transform: scale(1.1);
+}

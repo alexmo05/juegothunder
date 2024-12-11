@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrapa los objetos que caen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Pantalla de menú -->
+    <div id="menu" class="menu">
+        <h1>Atrapa los objetos que caen</h1>
+        <div>
+            <button onclick="startGame('easy')">Fácil</button>
+            <button onclick="startGame('medium')">Normal</button>
+            <button onclick="startGame('hard')">Difícil</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de juego -->
+    <div id="gameArea" class="gameArea">
+        <div id="player" class="player"></div>
+        <div id="score">Puntos: 0</div>
+        <div id="lives">Vidas: 3</div>
+    </div>
+
+    <!-- Pantalla Game Over -->
+    <div id="gameOver" class="gameOver">
+        <h1>GAME OVER</h1>
+        <button onclick="backToMenu()">Volver a jugar</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
